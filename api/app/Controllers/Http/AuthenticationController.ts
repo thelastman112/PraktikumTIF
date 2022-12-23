@@ -33,6 +33,7 @@ export default class AuthenticationController {
         email: request.body().email,
         username: request.body().username,
         password: request.body().password,
+        roleId: request.body().roleId,
       })
 
       // Logger.info('email')
