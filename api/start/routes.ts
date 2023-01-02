@@ -21,7 +21,10 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/', async () => {
-  return { hello: 'world' }
+  return { hello: 'aa' }
 })
+// Route.group(() => {
+
+// }.middleware('auth'))
 Route.post('/login', 'AuthenticationController.login')
 Route.post('/register', 'AuthenticationController.register')
