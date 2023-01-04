@@ -2,6 +2,7 @@ import React from 'react'
 import { MenuItem, Sidebar, Menu } from 'react-pro-sidebar'
 import { NavLink } from 'react-router-dom'
 import Navbar from '../Components/Navbar'
+import Sbar from '../Components/Sbar'
 
 type Props = {}
 
@@ -10,12 +11,7 @@ const Pweb = (props: Props) => {
     <>
       <Navbar />
       <div className='flex w-screen'>
-        <Sidebar defaultCollapsed={true} collapsedWidth={'0'}>
-          <Menu>
-            <MenuItem><NavLink to={"/Pweb"}>Pemrograman Web</NavLink></MenuItem>
-            <MenuItem>Pemrograman Jaringan</MenuItem>
-          </Menu>
-        </Sidebar>
+        <Sbar/>
         <main style={{ display: 'flex', padding: 10 }} className='w-full justify-center'>
           <div className='container p-5'>
             <h1>Formulir Kirim Tugas</h1>

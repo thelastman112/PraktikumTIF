@@ -18,18 +18,14 @@ const Login = (props: Props) => {
 
   const handlesubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault()
-
+ 
     axios
       .post(`${host}/login`, formData)
       .then(async res => {
-        console.log({data: res.data})
-        await SecureStoragePlugin.set({key: 'user', value: JSON.stringify(res.data.user)})
-        const user = await SecureStoragePlugin.get({key: 'user'})
-        console.table(JSON.parse(user.value))
-        await SecureStoragePlugin.set({key: 'token', value: res.data.token.token})
-        const token = await SecureStoragePlugin.get({key: 'token'})
-        console.log(token.value);
-        navigate('/admin')
+        console.log(res)
+        console.log(res.data.token)
+        await SecureStoragePlugin.set({ key : 'token', value: res.data.token})
+        navigate('/')
       })
       .catch((err: AxiosError) => {
         if (!err.response) {
@@ -39,7 +35,7 @@ const Login = (props: Props) => {
         const data = err.response?.data as JsonApiErrorNode
         console.error(err)
 
-        // Swal.fire('error', data.error.messages.errors.map(item =>))
+        Swal.fire('error', JSON.stringify(data.error))
       })
   }
   
@@ -109,7 +105,7 @@ const Login = (props: Props) => {
             >
               <span className="absolute inset-y-0 left-0 flex items-center pl-3">
               </span>
-              Sign in
+              Login
             </button>
           </div>
           <div className='flex items-center justify-between'>

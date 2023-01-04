@@ -2,21 +2,21 @@ import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import User from 'App/Models/User'
 import Hash from '@ioc:Adonis/Core/Hash'
 import Logger from '@ioc:Adonis/Core/Logger'
+import LoginValidator from 'App/Validators/LoginValidator'
 
 export default class AuthenticationController {
   public async login({ auth, response, request }: HttpContextContract) {
     // Logger.info('asdas')
     try {
-      const { email, username, password } = request.body()
+      const payload = await request.validate(LoginValidator)
 
-      Logger.info(password)
-
+      Logger.info(payload.password)
       const user = await User.query()
-        .where('email', email || '')
-        .orWhere('username', username || '')
+        .where('email', payload.email || '')
+        // .orWhere('username', username || '')
         .firstOrFail()
 
-      if (!(await Hash.verify(user.password, '' + password))) {
+      if (!(await Hash.verify(user.password, '' + payload.password))) {
         return response.unauthorized('Invalid credentials')
       }
 
