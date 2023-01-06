@@ -1,7 +1,7 @@
 # Praktikum TIF
 
 ## Description
-Used to monitor individual nutrition
+Used to start the Praktikum TIF Project
 
 ## Software Requirement
 - Nodejs 16
