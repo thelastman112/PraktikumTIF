@@ -1,4 +1,4 @@
-# Nutrition Dashboard
+# Praktikum TIF
 
 ## Description
 Used to monitor individual nutrition
@@ -11,14 +11,14 @@ Used to monitor individual nutrition
 1. Download & Prepare
 > ### Download the project
 > ```bash
-> git clone https://github.com/Dzyfhuba/nutrition-dashboard.git
+> git clone https://github.com/Dzyfhuba/praktikum-tif.git
 > ```
 > ### Change directory to the project location
 > ```bash
-> cd nutrition-dashboard
+> cd praktikum-tif
 > ```
 2. Setup Back End
-> Each procedure at this point must be located in the ```/api``` directory. from the point above, ```cd api``` to change directory to ```nutrition-dashboard/api```
+> Each procedure at this point must be located in the ```/api``` directory. from the point above, ```cd api``` to change directory to ```praktikum-tif/api```
 > ### Install dependencies
 > ```bash
 > npm install
@@ -44,7 +44,7 @@ Used to monitor individual nutrition
 > Don't close/stop/interupt the window/command.
 > Open new terminal instead.
 3. Setup Front End
-> Each procedure at this point must be located in the ```/nutrition-dashboard``` directory. from the point above, ```cd nutrition-dashboard``` to change directory to ```nutrition-dashboard/nutrition-dashboard```
+> Each procedure at this point must be located in the ```/praktikum-tif``` directory. from the point above, ```cd praktikum-tif``` to change directory to ```praktikum-tif/praktikum-tif```
 > ### Install dependencies
 > ```bash
 > npm install
