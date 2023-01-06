@@ -11,7 +11,7 @@ Used to start the Praktikum TIF Project
 1. Download & Prepare
 > ### Download the project
 > ```bash
-> git clone https://github.com/Dzyfhuba/praktikum-tif.git
+> git clone https://github.com/thelastman112/PraktikumTIF.git
 > ```
 > ### Change directory to the project location
 > ```bash
