@@ -22,9 +22,12 @@ const Login = (props: Props) => {
     axios
       .post(`${host}/login`, formData)
       .then(async res => {
-        console.log(res)
-        console.log(res.data.token)
-        await SecureStoragePlugin.set({ key : 'token', value: res.data.token})
+        await SecureStoragePlugin.set({key: 'token', value: res.data.token.token})
+        const token = await SecureStoragePlugin.get({key: 'token'})
+        console.log(token.value);
+        // console.log(res)
+        // console.log(res.data.token)
+        // await SecureStoragePlugin.set({ key : 'token', value: res.data.token})
         navigate('/')
       })
       .catch((err: AxiosError) => {
