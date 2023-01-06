@@ -15,7 +15,7 @@ Used to start the Praktikum TIF Project
 > ```
 > ### Change directory to the project location
 > ```bash
-> cd praktikum-tif
+> cd PRAKTIKUMTIF
 > ```
 2. Setup Back End
 > Each procedure at this point must be located in the ```/api``` directory. from the point above, ```cd api``` to change directory to ```praktikum-tif/api```
